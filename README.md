@@ -19,7 +19,7 @@
 ## バージョンとは
 Gitにおけるバージョンとは、ファイルの変更履歴のことを指している。
 身近なところでいうとDocbaseやGoogleのドキュメント、スプレッドシートでもバージョン（変更履歴）を管理するシステムを持っています。
-![](README/b42f64a4914082b4653d3a9600d7f319.png =250x)
+<img src="./README/b42f64a4914082b4653d3a9600d7f319.png width="250px">
 
 
 
@@ -31,7 +31,7 @@ Gitにおけるバージョンとは、ファイルの変更履歴のことを�
 ` $ git branch -d ブランチ名 `
 ・リモート（画像はgithub）での削除
 ↓マージが完了したら右の方にすぐ削除ボタンが出てくる
-![](README/3a4e4387799a5c96510d9cacf7a62cfe.png =250x)
+<img src="README/3a4e4387799a5c96510d9cacf7a62cfe.png width="250px">
 
 
 ## ブランチ戦略パターン
@@ -40,7 +40,7 @@ Gitにおけるバージョンとは、ファイルの変更履歴のことを�
 
 リリースされているアプリケーションをgitで管理しているとき、リリース済みのものはマスターブランチ、開発中の統合ブランチはdevelopとして切ることがある。
 ↓デフォルトブランチの変更を行うとgithub上でdevelopにマージするように設定できる。
-![](README/e6785ad23400ffc58c4ed407c36e938e.png =250x)
+<img src="README/e6785ad23400ffc58c4ed407c36e938e.png width="250px">
 
 DWC2ヶ月目の開発においてはリリース済みとかそういうのはないのでdevelopブランチは必要ないと思える。
 
@@ -48,14 +48,14 @@ DWC2ヶ月目の開発においてはリリース済みとかそういうのは�
 マストドン（Railsの学習にピッタリと噂されるやつ。チケット駆動のテスト駆動開発をしています。）
 [GitHub - tootsuite/mastodon: Your self-hosted, globally interconnected microblogging community](https://github.com/tootsuite/mastodon)
 コミット時に ` -m ` をつけずに、詳細入力でチケット番号（issueの番号）を関連付けている。
-![](README/0358c71dce45685fe423dd13d1b41fc6.png =250x)
+<img src="README/0358c71dce45685fe423dd13d1b41fc6.png width="250px">
 
 GitFlowのブランチ戦略
-![](README/36a3c2ff24891092f7bac882b5115110.png =250x)
+<img src="README/36a3c2ff24891092f7bac882b5115110.png width="250px">
 
 CIを回して、ブランチごとに単体テストを行うテスト駆動開発
 （説明は省略）
-![](README/147044515baad9c2f898b539f30cccbd.png =250x)
+<img src="README/147044515baad9c2f898b539f30cccbd.png width="250px">
 
 ## コンフリクト
 コンフリクトはgithub上で行わない。マスターブランチにマージしていくのは良くないから。（詳しくは省略）
@@ -66,35 +66,35 @@ CIを回して、ブランチごとに単体テストを行うテスト駆動開
 
 ### マスターブランチ
 
-![](README/b31951a2d4aedf03e616607d8bf0f8d5.png =250x)
+<img src="README/b31951a2d4aedf03e616607d8bf0f8d5.png width="250px">
 
 一行だけ文が入っている` sample.txt `というものを用意して、commitする。
 ココから２つブランチを切り、同じ行を編集することでコンフリクトを起こす。２つのブランチで２行目に文章を追加する。
-![](README/96e5deda48a933f7638cdbc2f47da59f.png =250x)
+<img src="README/96e5deda48a933f7638cdbc2f47da59f.png width="250px">
 
 ### firstブランチ
 
 `sample.txt`の２行目に
 `first`と追加。
-![](README/b586fe093e102f58abc279a42de74ebf.png =250x)
+<img src="README/b586fe093e102f58abc279a42de74ebf.png width="250px">
 
 
 masterにマージ
 
-![](README/f46db2ead656384301b2d1edb84db840.png =250x)
+<img src="README/f46db2ead656384301b2d1edb84db840.png width="250px">
 
 ### secondブランチ
 
 `sample.txt`の２行目に
 `second`と追加。
-![](README/13fbddc2a7662267876bdc3b2c29f1d4.png =250x)
+<img src="README/13fbddc2a7662267876bdc3b2c29f1d4.png width="250px">
 
 ここで、２行目の変更に対してコンフリクトが起こっているためマスターにマージしてしまうと動くか確認していないバージョンが含まれてしまうことになる。
 （本来コンフリクトに気づくタイミングはgithubにプッシュしてマージしようとしたとき。）
 
 ### コンフリクト発生
 まずマスターをマージしてくる。
-![](README/7d64fd7828f7133eee61e8b8c926d954.png =250x)
+<img src="README/7d64fd7828f7133eee61e8b8c926d954.png width="250px">
 ↑コンフリクトしていると言われている。
 
 ステータスを見るとこの後の作業は全て乗っている。
@@ -104,60 +104,60 @@ masterにマージ
 →マージ取り消すには`git merge --abort`を。
 
 赤く表示されている `both modified`（お互いに変更が加えられている）のファイルを治す。
-![](README/56acd8471ef56d9409e87f87abe177f8.png =250x)
+<img src="README/56acd8471ef56d9409e87f87abe177f8.png width="250px">
 
 ### 解消２通り
 ##### ①テキストエディタで治す
-![](README/2e6bfefbb06bc642d1a33d374a9b4127.png =250x)
+<img src="README/2e6bfefbb06bc642d1a33d374a9b4127.png width="250px">
 ↓
-![](README/d936776c1a2c8f385b23b46ee576a974.png =250x)
+<img src="README/d936776c1a2c8f385b23b46ee576a974.png width="250px">
 
 直しただけではまだ終わっていない。
 コミットしてコンフリクトが解消される
 今回コミットメッセージははじめから用意されているのを使っているため、`-m`は使っていない。
 
-![](README/b2e37b05aeef9f0e546f954889f89b93.png =250x)
+<img src="README/b2e37b05aeef9f0e546f954889f89b93.png width="250px">
 
 解消されたらプッシュしましょう
 
 ##### ②マージツールを使う（こっちのほうが見やすそう）
 これを使うと①で言うとaddのとこまでやってくれる
-![](README/291cd613846bdcfdf40676dcadaef6ee.png =250x)
+<img src="README/291cd613846bdcfdf40676dcadaef6ee.png width="250px">
 エンター押す
-![](README/ef33070b1424a6517a29b53a107c45f9%20(1).png =250x)
+<img src="README/ef33070b1424a6517a29b53a107c45f9%20(1).png width="250px">
 セーブ（Ctrl+S）して閉じる
 （画像みたいにGUIが開かれる場合とVimなどのエディタが開かれる場合があるが、設定でかえれる。正直自分は使ったことがないため気になる人は調べてみてください。）
 
 するとaddまで行われている。
 .origとかいうファイルが生成されて、コンフリクト解消前の情報を残しておいてくれる。無事解消したら消せばいい。
-![](README/86fa4d7b61d88fdef0ab8f10d95a2386.png =250x)
+<img src="README/86fa4d7b61d88fdef0ab8f10d95a2386.png width="250px">
 
 All conflicts….と書いてあるとおり、`git commit`を行う。
-![](README/db7c429e90300ac680f735d65f7b6664.png =250x)
+<img src="README/db7c429e90300ac680f735d65f7b6664.png width="250px">
 
 ### トピックブランチ上での解消を終えたら
 最後はマスターにマージして終了。
 
-![](README/a55d95ead7d85f73f71f526e2ccabf9a.png =250x)
+<img src="./README/a55d95ead7d85f73f71f526e2ccabf9a.png width="250px">
 
 
 ## リベースでのコンフリクト解消手順
 先ほどとかぶるところは省略
 ##### secondブランチにてコンフリクト発生
-![](README/48dad2d6b8ea553c4b1f71123c87e513.png =250x)
+<img src="README/48dad2d6b8ea553c4b1f71123c87e513.png width="250px">
 マージのときより長い文で何かが書いてあるが、書いてあることは解消の手順。わからなくなってもこの出力を見返せばオッケ
 
 解消の手順はstatusにも書いてある。
-![](README/bc06de3534ea34fcfd6aedbdc3713e26.png =250x)
+<img src="README/bc06de3534ea34fcfd6aedbdc3713e26.png width="250px">
 
 ##### 解消２通り
 マージのときとaddするまでは同じ。
-![](README/c6f2fdd83080793efc7046dc668a2fdc.png =250x)
+<img src="README/c6f2fdd83080793efc7046dc668a2fdc.png width="250px">
 
 マージではaddのあとcommitしたが、リベースではaddのあと
 `git rebase —continue` で終了する。
 
-![](README/ae8533d698fd1050b08af1b88f16978f.png =250x)
+<img src="README/ae8533d698fd1050b08af1b88f16978f.png" width="250px">
 
 リモートにpushしてある場合はコミットの順番などが書き換わっているためforce push（強制プッシュ）しなければならない。
 （`git push -f ブランチ名`）
