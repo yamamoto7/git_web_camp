@@ -31,7 +31,8 @@ Gitにおけるバージョンとは、ファイルの変更履歴のことを�
 ` $ git branch -d ブランチ名 `
 ・リモート（画像はgithub）での削除
 ↓マージが完了したら右の方にすぐ削除ボタンが出てくる
-![](README/3a4e4387799a5c96510d9cacf7a62cfe.png)
+![](README/3a4e4387799a5c96510d9cacf7a62cfe.png =100x)
+<img src="README/3a4e4387799a5c96510d9cacf7a62cfe.png" width="200px">
 
 
 ## ブランチ戦略パターン
